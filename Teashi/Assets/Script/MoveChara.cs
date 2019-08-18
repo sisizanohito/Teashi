@@ -25,7 +25,7 @@ public class MoveChara : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Physics.Linecast(rayPosition.position, transform.position + (Vector3.down * 0.5f)))
+        if (Physics.Linecast(rayPosition.position, transform.position + (Vector3.down * 0.01f)))
         {
             isGround = true;
         }
@@ -35,7 +35,7 @@ public class MoveChara : MonoBehaviour
         }
 
         //　接地確認用にレイを視覚化
-        Debug.DrawLine(rayPosition.position, transform.position + (Vector3.down * 0.5f), Color.red);
+        Debug.DrawLine(rayPosition.position, transform.position + (Vector3.down * 0.01f), Color.red);
     }
 
     private void LateUpdate()

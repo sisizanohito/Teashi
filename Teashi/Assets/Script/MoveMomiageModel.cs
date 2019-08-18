@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveAshi : MonoBehaviour
+public class MoveMomiageModel : MonoBehaviour
 {
     public GameObject kata;
     public GameObject te;
@@ -30,7 +30,7 @@ public class MoveAshi : MonoBehaviour
         float teLen = teLength + kataTote.sqrMagnitude * 4.0f;
         if (hitting)
         {
-            //teLen += 0.1f;
+            teLen += 0.1f;
         }
         //床の判定
         Ray ray = new Ray(transform.position, transform.forward);
@@ -44,11 +44,7 @@ public class MoveAshi : MonoBehaviour
             {
                 Vector3 moveVec =  preHitPos- hitPos;
                 //moveVec.y = 0.0f;
-                if(moveVec.magnitude < 1.0f)//異常値を弾く
-                {
-                    moveChara.Move(moveVec*50.0f);
-                }
-                
+                moveChara.Move(moveVec);
             }
             //Debug.Log(transform.name + ":" + hitting);
             preHitPos = hitPos;
