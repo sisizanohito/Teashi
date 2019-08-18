@@ -12,7 +12,7 @@ public class MoveHead : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         transform.position = VRHead.transform.position;
         transform.rotation = VRHead.transform.rotation;

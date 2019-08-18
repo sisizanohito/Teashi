@@ -23,7 +23,7 @@ public class MoveChara : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (Physics.Linecast(rayPosition.position, transform.position + (Vector3.down * 0.01f)))
         {

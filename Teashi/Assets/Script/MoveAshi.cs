@@ -24,7 +24,7 @@ public class MoveAshi : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         Vector3 kataTote = te.transform.position - kata.transform.position;
         float teLen = teLength + kataTote.sqrMagnitude * 4.0f;
